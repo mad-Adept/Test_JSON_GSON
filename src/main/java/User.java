@@ -1,9 +1,15 @@
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.ArrayList;
 
 public class User {
+    @JsonProperty("Имя")
     String name;
+    @JsonProperty("Возраст")
     int age;
+    @JsonProperty("Пол")
     boolean sex;
+    @JsonProperty("Телефон")
     String phone;
     ArrayList<String> frends = new ArrayList<String>();
 

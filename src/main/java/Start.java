@@ -1,4 +1,6 @@
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.sun.javaws.Main;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -7,25 +9,27 @@ import java.util.ArrayList;
 public class Start {
     public static void main(String[] args) {
 
-/*        User user1 = new User("Vasya", 33, true, "5-51-18", "Petya");
+        User user1 = new User("Vasya", 33, true, "5-51-18", "Petya");
         User user2 = new User("Misha", 25, true, "5-17-04", "Petya");
         User user3 = new User("Dasha", 18, false, "5-32-53", "Vasya");
         user3.getFrends().add("Sasha");
         ArrayList<User> list = new ArrayList<User>();
-        Gson gson = new Gson();
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
         list.add(user1);
         list.add(user2);
         list.add(user3);
         String s = gson.toJson(list);
-        try {
-            FileWriter writer = new FileWriter("C:\\Users\\Anton\\IdeaProjects\\JSON_Project_GSON(lib)\\src\\main\\resources\\users.json");
-            System.out.println(s);
+        //InputStream res = Main.class.getResourceAsStream("users.json");
+        System.out.println(res);
+/*        try {
+            String location = Start.class.getProtectionDomain().getCodeSource().getLocation().getPath();
+            FileWriter writer = new FileWriter(location + "users.json");
             writer.write(s);
             writer.close();
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("Исключение!");*/
-        Gson gson = new Gson();
+            System.out.println("Исключение!");
+*//*        Gson gson = new Gson();
         try {
             File f = new File("C:\\Users\\Anton\\IdeaProjects\\JSON_Project_GSON(lib)\\src\\main\\resources\\users.json");
             FileReader reader = new FileReader(f);
@@ -38,7 +42,8 @@ public class Start {
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("Исключение 2!");
-        }
+        }*//*
+        }*/
     }
-    }
+}
 
